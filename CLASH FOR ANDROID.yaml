@@ -1,0 +1,71 @@
+mixed-port: 7890
+allow-lan: false
+mode: Rule
+log-level: silent
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: redir-host
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+  fallback:
+    - https://1.0.0.1/dns-query
+    - https://8.8.4.4/dns-query
+    - 1.1.1.1
+    - 8.8.8.8
+proxies:
+
+  - name: "👾TEST-SERVER"
+    type: vmess
+    server: 45.145.74.225
+    port: 33999
+    uuid: 300c505b-c09d-4e2b-f4ff-f522f8c576bf
+    alterId: 128
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /
+    ws-headers: 
+       Host: connect.smart.com.kh
+
+proxy-groups:
+  - name: 🔆 LIST
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🔰 Select
+  - name: 🔰 Select
+    type: select
+    proxies:
+      - 👾TEST-SERVER
+  - name: AUTO ♻️
+    type: url-test
+    proxies:
+      - 👾TEST-SERVER
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+  - name: "Auto-Fallback"
+    type: fallback
+    proxies:
+      - 👾TEST-SERVER
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+rules:
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - GEOIP,IR,DIRECT
+  - MATCH,🔆 LIST
+  - IP-CIDR,8.8.8.8/32,🔆 LIST
+  - IP-CIDR,8.8.4.4/32,🔆 LIST
+  - IP-CIDR,1.1.1.1/32,🔆 LIST
+  - IP-CIDR,1.0.0.1/32,🔆 LIST
+  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
