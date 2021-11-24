@@ -1,0 +1,121 @@
+mixed-port: 7890
+allow-lan: false
+mode: Rule
+log-level: silent
+external-controller: 127.0.0.1:80
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: redir-host
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+  fallback:
+    - https://1.0.0.1/dns-query
+    - https://8.8.4.4/dns-query
+    - 1.1.1.1
+    - 8.8.8.8
+proxies:
+
+  - name: 🇺🇸V2-SMART-KH
+    type: vmess
+    server: 45.145.74.225
+    port: 33999
+    uuid: 300c505b-c09d-4e2b-f4ff-f522f8c576bf
+    alterId: 128
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇸🇬V2-SMART-KH
+    type: vmess
+    server: 51.79.145.142
+    port: 80
+    uuid: 9f0dcd95-1462-4ffe-a4e2-8c7b1fe1c5c2
+    alterId: 2
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇸🇬SSR-SMART-KH
+    type: ssr
+    server: 51.79.145.142
+    local_address: 127.0.0.1
+    local_port: 1080
+    timeout: 300
+    port: 8461
+    cipher: AES-256-CFB
+    password: artunnel57-ssrssr
+    obfs: http_simple
+    protocol: auth_sha1_v4
+    obfs-param: connect.smart.com.kh
+    protocol-param: 
+    udp: true
+    
+  - name: 🇸🇬SS-SMART-KH
+    type: ss
+    server: 51.79.145.142
+    port: 1449
+    cipher: chacha20-ietf-poly1305
+    password: artunnel57-hcjcjcjjc
+    plugin: obfs
+    plugin-opts:
+       mode: http
+       host: connect.smart.com.kh
+
+proxy-groups:
+  - name: 🔆 LIST
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🔰 Select
+  - name: 🔰 Select
+    type: select
+    proxies:
+      - 🇺🇸V2-SMART-KH
+      - 🇸🇬V2-SMART-KH
+      - 🇸🇬SSR-SMART-KH
+      - 🇸🇬SS-SMART-KH
+  - name: AUTO ♻️
+    type: url-test
+    proxies:
+      - 🇺🇸V2-SMART-KH
+      - 🇸🇬V2-SMART-KH
+      - 🇸🇬SSR-SMART-KH
+      - 🇸🇬SS-SMART-KH
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+  - name: "Auto-Fallback"
+    type: fallback
+    proxies:
+      - 🇺🇸V2-SMART-KH
+      - 🇸🇬V2-SMART-KH
+      - 🇸🇬SSR-SMART-KH
+      - 🇸🇬SS-SMART-KH
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+rules:
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - GEOIP,IR,DIRECT
+  - MATCH,🔆 LIST
+  - IP-CIDR,1.3.0.0/18,🔆 LIST
+  - IP-CIDR,1.0.1.0/18,🔆 LIST
+  - IP-CIDR,1.0.8.0/18,🔆 LIST
+  - IP-CIDR,1.2.0.0/18,🔆 LIST
+  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
