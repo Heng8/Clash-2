@@ -1,0 +1,2028 @@
+mixed-port: 64000
+allow-lan: false
+mode: Rule
+log-level: info
+ipv6: false
+interface-name: Ethernet
+external-controller: 127.0.0.1:65000
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: redir-host
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://dns-family.adguard.com/dns-query
+    - https://dns-unfiltered.adguard.com/dns-query
+    - https://doh.cleanbrowsing.org/doh/family-filter/
+    - https://doh.cleanbrowsing.org/doh/adult-filter/
+    - https://doh.cleanbrowsing.org/doh/security-filter/
+    - https://doh.opendns.com/dns-query
+    - https://doh.familyshield.opendns.com/dns-query
+    - https://dns.google/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://security.cloudflare-dns.com/dns-query
+    - https://family.cloudflare-dns.com/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns10.quad9.net/dns-query
+    - https://dns11.quad9.net/dns-query
+    - https://dns.switch.ch/dns-query
+    - https://dns.comss.one/dns-query
+    - https://dns.east.comss.one/dns-query
+    - https://private.canadianshield.cira.ca/dns-query
+    - https://protected.canadianshield.cira.ca/dns-query
+    - https://family.canadianshield.cira.ca/dns-query
+    - https://doh-fi.blahdns.com/dns-query
+    - https://doh-jp.blahdns.com/dns-query
+    - https://doh-de.blahdns.com/dns-query
+    - https://fi.doh.dns.snopyta.org/dns-query
+    - https://dns-doh.dnsforfamily.com/dns-query
+    - https://odvr.nic.cz/doh
+    - https://dns.alidns.com/dns-query
+    - https://dns.cfiec.net/dns-query
+    - https://asia.dnscepat.id/dns-query
+    - https://eropa.dnscepat.id/dns-query
+    - https://doh.360.cn/dns-query
+    - https://public.dns.iij.jp/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.pub/dns-query
+    - https://dns.twnic.tw/dns-query
+    - https://doh.tiarap.org/dns-query
+    - https://doh.tiar.app/dns-query
+    - https://jp.tiarap.org/dns-query
+    - https://jp.tiar.app/dns-query
+    - https://dns.oszx.co/dns-query
+    - https://dns.pumplex.com/dns-query
+    - https://doh.applied-privacy.net/query
+    - https://dns.decloudus.com/dns-query
+    - https://resolver-eu.lelux.fi/dns-query
+    - https://doh.dns.sb/dns-query
+    - https://dnsforge.de/dns-query
+    - https://kaitain.restena.lu/dns-query
+    - https://doh.ffmuc.net/dns-query
+    - https://dns.digitale-gesellschaft.ch/dns-query
+    - https://doh.libredns.gr/dns-query
+    - https://doh.libredns.gr/ads
+    - https://ibksturm.synology.me/dns-query
+    - https://doh.nl.ahadns.net/dns-query
+    - https://doh.in.ahadns.net/dns-query
+    - https://doh.la.ahadns.net/dns-query
+    - https://doh.ny.ahadns.net/dns-query
+    - https://doh.pl.ahadns.net/dns-query
+    - https://doh.it.ahadns.net/dns-query
+    - https://doh.es.ahadns.net/dns-query
+    - https://doh.no.ahadns.net/dns-query
+    - https://doh.chi.ahadns.net/dns-query
+    - https://doh.au.ahadns.net/dns-query
+    - https://doh-2.seby.io/dns-query
+    - https://doh.dnslify.com/dns-query
+    - https://basic.bravedns.com/
+    - https://freedns.controld.com/p0
+    - https://freedns.controld.com/p1
+    - https://freedns.controld.com/p2
+    - https://freedns.controld.com/p3
+    - https://doh.mullvad.net/dns-query
+    - https://adblock.doh.mullvad.net/dns-query
+    - https://dns.arapurayil.com/dns-query
+    - https://dandelionsprout.asuscomm.com:2501/dns-query
+    - tls://dns.adguard.com
+  fallback:
+    - 1.1.1.1
+    - 1.0.0.2
+  tun:
+  enable: true
+  stack: gvisor
+  dns-hijack:
+    - 198.18.0.2:53
+  macOS-auto-route: true
+proxies:
+
+  - name: 🇺🇸V2-SMART-KH1
+    type: vmess
+    server: 159.223.58.97
+    port: 80
+    uuid: 20d82a18-7825-437a-b6f9-db19e4062202
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇺🇸V2-SMART-KH2
+    type: vmess
+    server: 159.223.58.98
+    port: 80
+    uuid: 2f820b5d-2425-4d23-af70-0cae6f8c8a1a
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇺🇸V2-SMART-KH3
+    type: vmess
+    server: 159.223.141.112
+    port: 80
+    uuid: 8ed970c7-2880-4385-aa9b-40dc30738a1d
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇺🇸V2-SMART-KH4
+    type: vmess
+    server: 159.223.141.190
+    port: 80
+    uuid: 4b6811c9-03a4-41b0-f277-aa5750698fec
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇮🇳V2-SMART-KH1
+    type: vmess
+    server: 139.59.21.50
+    port: 80
+    uuid: 12f2b5db-958b-42e6-8d9d-afeaaac24ad5
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇮🇩V2-SMART-KH1
+    type: vmess
+    server: id4.v2rayserv.com
+    port: 80
+    uuid: a447a5df-e7b2-4b33-b11a-b4d3f35222ac
+    alterId: 64
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /sshocean
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇮🇩V2-SMART-KH2
+    type: vmess
+    server: id5.v2rayserv.com
+    port: 80
+    uuid: dacddc6d-58ed-4497-aeeb-212ed5adf123
+    alterId: 64
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /sshocean
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇸🇬V2-SMART-KH1
+    type: vmess
+    server: sg1ray.serverssh.net
+    port: 80
+    uuid: 9bb35cab-04b5-4da3-96a8-adb83809bf21
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /serverssh.net
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇸🇬V2-SMART-KH2
+    type: vmess
+    server: sg2ray.serverssh.net
+    port: 80
+    uuid: b41caa4f-01b1-4324-bbfd-fb641069e7bb
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /serverssh.net
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇸🇬V2-SMART-KH3
+    type: vmess
+    server: sg3ray.serverssh.net
+    port: 80
+    uuid: 77185f8f-4cd4-4127-93b4-a73b221ecf41
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /serverssh.net
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇬🇧V2-SMART-KH1
+    type: vmess
+    server: ukray.serverssh.net
+    port: 80
+    uuid: 30e5cd49-a8a8-40ed-952b-372c3d63b307
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /serverssh.net
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇨🇦V2-SMART-KH1
+    type: vmess
+    server: ca1ray.serverssh.net
+    port: 80
+    uuid: 8952fee2-e888-4f04-a99b-fc540d916c05
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /serverssh.net
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇩🇪V2-SMART-KH1
+    type: vmess
+    server: geray.serverssh.net
+    port: 80
+    uuid: fb577c30-0e7d-46b6-a851-69a5e8e35389
+    alterId: 0
+    cipher: auto
+    tls: null
+    skip-cert-verify: false
+    servername: null
+    network: ws
+    ws-path: /serverssh.net
+    ws-headers: 
+       Host: connect.smart.com.kh
+       
+  - name: 🇸🇬SSR-SMART-KH1
+    type: ssr
+    server: do3.kitu.xyz
+    local_address: 127.0.0.1
+    local_port: 1080
+    timeout: 300
+    port: 8467
+    cipher: AES-256-CFB
+    password: kituvpn-7hcjxjjc
+    obfs: http_simple
+    protocol: auth_sha1_v4
+    obfs-param: connect.smart.com.kh
+    protocol-param: 
+    udp: true
+    
+  - name: 🇸🇬SS-SMART-KH1
+    type: ss
+    server: do2.kitu.xyz
+    port: 1480
+    cipher: chacha20-ietf-poly1305
+    password: kituvpn-chjxjchu
+    plugin: obfs
+    plugin-opts:
+       mode: http
+       host: connect.smart.com.kh
+       
+  - name: "🇺🇸PUBG-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: www.pubgmobile.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸MLBB-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: m.mobilelegends.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸FREEFIRE-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: ff.garena.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸SOCIAL-PACK-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: line.me
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸FB-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: m.facebook.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸YT-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: m.youtube.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸LINE-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: line.me
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸WECHAT-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: www.wechat.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸IG-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: www.instagram.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸WHATSAPP-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: www.whatsapp.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸TIKTOK-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: www.tiktok.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸VIBER-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: www.viber.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸ROS-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: www.rulesofsurvivalgame.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+    
+  - name: "🇺🇸SPOTIFY-TROJAN"
+    type: trojan
+    server: ust-1.opensvr.net
+    port: 443
+    password: opentunnel.net-hcjxjcu
+    udp: true
+    sni: www.spotify.com
+    alpn:
+       - h2
+       - http/1.1
+    skip-cert-verify: true
+
+proxy-groups:
+  - name: 🪐 LIST
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🔰 Server List
+      - Auto-Fallback 🌀
+      - PROXY 🚀
+      - DNS-TEST📡
+      - Domain 🌐
+      - LOAD BALANCE ⚡
+      - AbemaTV 📺
+      - Amazon Prime Video 🎥
+      - Epicgames 🎮
+      - Fox+ ⚡
+      - Netflix 📺
+      - Spotify 🎧
+      - viuTV 📺
+      - ▶ YouTube
+      - DNS ⚡
+      - Speedtest ⚡
+      - Telegram ⛅
+      - ⌨️ Coding
+      - 🦊 Mozilla
+      - 🍎 Apple
+      - Line ☁
+      - 🌫 Microsoft
+      - Spark ⭐
+      - Steam 🎮
+      - Facebook 🌐
+      - Google ⛅
+      - Kakao Talk ⚡
+      - Potato Chat 📡
+      - SoftLayer ⛅
+  - name: 🔰 Server List
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: AUTO ♻️
+    type: url-test
+    proxies:
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: PROXY 🚀
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: AbemaTV 📺
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Amazon Prime Video 🎥
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Epicgames 🎮
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Fox+ ⚡
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Netflix 📺
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Spotify 🎧
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: viuTV 📺
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: ▶ YouTube
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: DNS ⚡
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Speedtest ⚡
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Telegram ⛅
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: ⌨️ Coding
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: 🦊 Mozilla
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: 🍎 Apple
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Line ☁
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: 🌫 Microsoft
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Spark ⭐
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Steam 🎮
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Facebook 🌐
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Google ⛅
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Kakao Talk ⚡
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Potato Chat 📡
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: SoftLayer ⛅
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: DNS-TEST📡
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: Domain 🌐
+    type: select
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+  - name: LOAD BALANCE ⚡
+    type: load-balance
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+  - name: Auto-Fallback 🌀
+    type: fallback
+    proxies:
+      - AUTO ♻️
+      - 🇺🇸V2-SMART-KH1
+      - 🇺🇸V2-SMART-KH2
+      - 🇺🇸V2-SMART-KH3
+      - 🇺🇸V2-SMART-KH4
+      - 🇮🇳V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH1
+      - 🇮🇩V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH1
+      - 🇸🇬V2-SMART-KH2
+      - 🇸🇬V2-SMART-KH3
+      - 🇬🇧V2-SMART-KH1
+      - 🇨🇦V2-SMART-KH1
+      - 🇩🇪V2-SMART-KH1
+      - 🇺🇸PUBG-TROJAN
+      - 🇺🇸MLBB-TROJAN
+      - 🇺🇸FREEFIRE-TROJAN
+      - 🇺🇸SOCIAL-PACK-TROJAN
+      - 🇺🇸FB-TROJAN
+      - 🇺🇸YT-TROJAN
+      - 🇺🇸LINE-TROJAN
+      - 🇺🇸WECHAT-TROJAN
+      - 🇺🇸IG-TROJAN
+      - 🇺🇸WHATSAPP-TROJAN
+      - 🇺🇸TIKTOK-TROJAN
+      - 🇺🇸VIBER-TROJAN
+      - 🇺🇸ROS-TROJAN
+      - 🇺🇸SPOTIFY-TROJAN
+      - 🇸🇬SSR-SMART-KH1
+      - 🇸🇬SS-SMART-KH1
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+rules:
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - GEOIP,IR,DIRECT
+  - MATCH,🔰 Server List
+  - IP-CIDR,1.3.0.0/8,🔰 Server List
+  - IP-CIDR,1.0.1.0/16,🔰 Server List
+  - IP-CIDR,1.0.8.0/18,🔰 Server List
+  - IP-CIDR,1.2.0.0/32,🔰 Server List
+  - MATCH,PROXY 🚀
+  - IP-CIDR,1.3.0.0/8,PROXY 🚀
+  - IP-CIDR,1.0.1.0/16,PROXY 🚀
+  - IP-CIDR,1.0.8.0/18,PROXY 🚀
+  - IP-CIDR,1.2.0.0/32,PROXY 🚀
+  - MATCH,DNS-TEST📡
+  - IP-CIDR,1.3.0.0/8,DNS-TEST📡
+  - IP-CIDR,1.0.1.0/16,DNS-TEST📡
+  - IP-CIDR,1.0.8.0/18,DNS-TEST📡
+  - IP-CIDR,1.2.0.0/32,DNS-TEST📡
+  - MATCH,Domain 🌐
+  - IP-CIDR,1.3.0.0/8,Domain 🌐
+  - IP-CIDR,1.0.1.0/16,Domain 🌐
+  - IP-CIDR,1.0.8.0/18,Domain 🌐
+  - IP-CIDR,1.2.0.0/32,Domain 🌐
+  - MATCH,Auto-Fallback 🌀
+  - IP-CIDR,1.3.0.0/8,Auto-Fallback 🌀
+  - IP-CIDR,1.0.1.0/16,Auto-Fallback 🌀
+  - IP-CIDR,1.0.8.0/18,Auto-Fallback 🌀
+  - IP-CIDR,1.2.0.0/32,Auto-Fallback 🌀
+  - MATCH,AUTO ♻️
+  - IP-CIDR,1.3.0.0/8,AUTO ♻️
+  - IP-CIDR,1.0.1.0/16,AUTO ♻️
+  - IP-CIDR,1.0.8.0/18,AUTO ♻️
+  - IP-CIDR,1.2.0.0/32,AUTO ♻️
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - DOMAIN-KEYWORD,bilibili,DIRECT
+  - DOMAIN-SUFFIX,acg.tv,DIRECT
+  - DOMAIN-SUFFIX,acgvideo.com,DIRECT
+  - DOMAIN-SUFFIX,b23.tv,DIRECT
+  - DOMAIN-SUFFIX,biliapi.com,DIRECT
+  - DOMAIN-SUFFIX,biliapi.net,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,biligame.com,DIRECT
+  - DOMAIN-SUFFIX,biligame.net,DIRECT
+  - DOMAIN-SUFFIX,hdslb.com,DIRECT
+  - DOMAIN-SUFFIX,im9.com,DIRECT
+  - DOMAIN-SUFFIX,abc.xyz,PROXY 🚀
+  - DOMAIN-SUFFIX,android.com,PROXY 🚀
+  - DOMAIN-SUFFIX,androidify.com,PROXY 🚀
+  - DOMAIN-SUFFIX,dialogflow.com,PROXY 🚀
+  - DOMAIN-SUFFIX,autodraw.com,PROXY 🚀
+  - DOMAIN-SUFFIX,capitalg.com,PROXY 🚀
+  - DOMAIN-SUFFIX,certificate-transparency.org,PROXY 🚀
+  - DOMAIN-SUFFIX,chrome.com,PROXY 🚀
+  - DOMAIN-SUFFIX,chromeexperiments.com,PROXY 🚀
+  - DOMAIN-SUFFIX,chromestatus.com,PROXY 🚀
+  - DOMAIN-SUFFIX,chromium.org,PROXY 🚀
+  - DOMAIN-SUFFIX,creativelab5.com,PROXY 🚀
+  - DOMAIN-SUFFIX,debug.com,PROXY 🚀
+  - DOMAIN-SUFFIX,deepmind.com,PROXY 🚀
+  - DOMAIN-SUFFIX,firebaseio.com,PROXY 🚀
+  - DOMAIN-SUFFIX,getmdl.io,PROXY 🚀
+  - DOMAIN-SUFFIX,ggpht.com,PROXY 🚀
+  - DOMAIN-SUFFIX,gmail.com,PROXY 🚀
+  - DOMAIN-SUFFIX,gmodules.com,PROXY 🚀
+  - DOMAIN-SUFFIX,godoc.org,PROXY 🚀
+  - DOMAIN-SUFFIX,golang.org,PROXY 🚀
+  - DOMAIN-SUFFIX,gstatic.com,PROXY 🚀
+  - DOMAIN-SUFFIX,gv.com,PROXY 🚀
+  - DOMAIN-SUFFIX,gwtproject.org,PROXY 🚀
+  - DOMAIN-SUFFIX,itasoftware.com,PROXY 🚀
+  - DOMAIN-SUFFIX,madewithcode.com,PROXY 🚀
+  - DOMAIN-SUFFIX,material.io,PROXY 🚀
+  - DOMAIN-SUFFIX,polymer-project.org,PROXY 🚀
+  - DOMAIN-SUFFIX,admin.recaptcha.net,PROXY 🚀
+  - DOMAIN-SUFFIX,recaptcha.net,PROXY 🚀
+  - DOMAIN-SUFFIX,shattered.io,PROXY 🚀
+  - DOMAIN-SUFFIX,synergyse.com,PROXY 🚀
+  - DOMAIN-SUFFIX,tensorflow.org,PROXY 🚀
+  - DOMAIN-SUFFIX,tfhub.dev,PROXY 🚀
+  - DOMAIN-SUFFIX,tiltbrush.com,PROXY 🚀
+  - DOMAIN-SUFFIX,waveprotocol.org,PROXY 🚀
+  - DOMAIN-SUFFIX,waymo.com,PROXY 🚀
+  - DOMAIN-SUFFIX,webmproject.org,PROXY 🚀
+  - DOMAIN-SUFFIX,webrtc.org,PROXY 🚀
+  - DOMAIN-SUFFIX,whatbrowser.org,PROXY 🚀
+  - DOMAIN-SUFFIX,widevine.com,PROXY 🚀
+  - DOMAIN-SUFFIX,x.company,PROXY 🚀
+  - DOMAIN-SUFFIX,youtu.be,PROXY 🚀
+  - DOMAIN-SUFFIX,yt.be,PROXY 🚀
+  - DOMAIN-SUFFIX,ytimg.com,PROXY 🚀
+  - DOMAIN-SUFFIX,abc.xyz,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,android.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,androidify.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,dialogflow.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,autodraw.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,capitalg.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,certificate-transparency.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,chrome.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,chromeexperiments.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,chromestatus.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,chromium.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,creativelab5.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,debug.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,deepmind.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,firebaseio.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,getmdl.io,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,ggpht.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,gmail.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,gmodules.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,godoc.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,golang.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,gstatic.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,gv.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,gwtproject.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,itasoftware.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,madewithcode.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,material.io,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,polymer-project.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,admin.recaptcha.net,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,recaptcha.net,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,shattered.io,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,synergyse.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,tensorflow.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,tfhub.dev,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,tiltbrush.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,waveprotocol.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,waymo.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,webmproject.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,webrtc.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,whatbrowser.org,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,widevine.com,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,x.company,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,youtu.be,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,yt.be,LOAD BALANCE ⚡
+  - DOMAIN-SUFFIX,ytimg.com,LOAD BALANCE ⚡
+  - DOMAIN,one.one.one.one,DNS-TEST📡
+  - DOMAIN,one.one.one.one,🇺🇸V2-SMART-KH1
+  - DOMAIN,one.one.one.one,🇺🇸V2-SMART-KH2
+  - DOMAIN,one.one.one.one,🇺🇸V2-SMART-KH3
+  - DOMAIN,one.one.one.one,🇺🇸V2-SMART-KH4
+  - DOMAIN,one.one.one.one,🇮🇳V2-SMART-KH1
+  - DOMAIN,one.one.one.one,🇮🇩V2-SMART-KH1
+  - DOMAIN,one.one.one.one,🇮🇩V2-SMART-KH2
+  - DOMAIN,one.one.one.one,🇸🇬V2-SMART-KH1
+  - DOMAIN,one.one.one.one,🇸🇬V2-SMART-KH2
+  - DOMAIN,one.one.one.one,🇸🇬V2-SMART-KH3
+  - DOMAIN,one.one.one.one,🇬🇧V2-SMART-KH1
+  - DOMAIN,one.one.one.one,🇨🇦V2-SMART-KH1
+  - DOMAIN,one.one.one.one,🇩🇪V2-SMART-KH1
+  - DOMAIN,one.one.one.one,🇸🇬SSR-SMART-KH1
+  - DOMAIN,one.one.one.one,🇸🇬SS-SMART-KH1
+  - DOMAIN,www.smart.com.kh,🇺🇸V2-SMART-KH1
+  - DOMAIN,www.smart.com.kh,🇺🇸V2-SMART-KH2
+  - DOMAIN,www.smart.com.kh,🇺🇸V2-SMART-KH3
+  - DOMAIN,www.smart.com.kh,🇺🇸V2-SMART-KH4
+  - DOMAIN,www.smart.com.kh,🇮🇳V2-SMART-KH1
+  - DOMAIN,www.smart.com.kh,🇮🇩V2-SMART-KH1
+  - DOMAIN,www.smart.com.kh,🇮🇩V2-SMART-KH2
+  - DOMAIN,www.smart.com.kh,🇸🇬V2-SMART-KH1
+  - DOMAIN,www.smart.com.kh,🇸🇬V2-SMART-KH2
+  - DOMAIN,www.smart.com.kh,🇸🇬V2-SMART-KH3
+  - DOMAIN,www.smart.com.kh,🇬🇧V2-SMART-KH1
+  - DOMAIN,www.smart.com.kh,🇨🇦V2-SMART-KH1
+  - DOMAIN,www.smart.com.kh,🇩🇪V2-SMART-KH1
+  - DOMAIN,www.smart.com.kh,🇸🇬SSR-SMART-KH1
+  - DOMAIN,www.smart.com.kh,🇸🇬SS-SMART-KH1
+  - DOMAIN,staging-getmynumber.smart.com.kh,Domain 🌐
+  - DOMAIN,mobileconnect.smart.com.kh,Domain 🌐
+  - DOMAIN,lengarena.smart.com.kh,Domain 🌐
+  - DOMAIN,cvps.smart.com.kh,Domain 🌐
+  - DOMAIN,freesimcard.smart.com.kh,Domain 🌐
+  - DOMAIN,pleng-media.smart.com.kh,Domain 🌐
+  - DOMAIN,uat-fwbb.smart.com.kh,Domain 🌐
+  - DOMAIN,beta.smart.com.kh,Domain 🌐
+  - DOMAIN,bongsmart.smart.com.kh,Domain 🌐
+  - DOMAIN,uat-pre-order.smart.com.kh,Domain 🌐
+  - DOMAIN,staging-pipayapi.smart.com.kh,Domain 🌐
+  - DOMAIN,app-assets.smart.com.kh,Domain 🌐
+  - DOMAIN,zerobalance-filter-test.smart.com.kh,Domain 🌐
+  - DOMAIN,zerobalance-api.smart.com.kh,Domain 🌐
+  - DOMAIN,headerenrichment.smart.com.kh,Domain 🌐
+  - DOMAIN,linear-abematv.akamaized.net,PROXY 🚀
+  - DOMAIN-SUFFIX,abema.io,AbemaTV 📺
+  - DOMAIN-SUFFIX,abema.tv,AbemaTV 📺
+  - DOMAIN-SUFFIX,akamaized.net,AbemaTV 📺
+  - DOMAIN-SUFFIX,ameba.jp,AbemaTV 📺
+  - DOMAIN-SUFFIX,hayabusa.io,AbemaTV 📺
+  - DOMAIN-SUFFIX,aiv-cdn.net,Amazon Prime Video 🎥
+  - DOMAIN-SUFFIX,amazonaws.com,Amazon Prime Video 🎥
+  - DOMAIN-SUFFIX,amazonvideo.com,Amazon Prime Video 🎥
+  - DOMAIN-SUFFIX,llnwd.net,Amazon Prime Video 🎥
+  - DOMAIN-KEYWORD,epicgames,Epicgames 🎮
+  - DOMAIN-SUFFIX,helpshift.com,Epicgames 🎮
+  - DOMAIN-KEYWORD,foxplus,Fox+ ⚡
+  - DOMAIN-SUFFIX,config.fox.com,Fox+ ⚡
+  - DOMAIN-SUFFIX,emome.net,Fox+ ⚡
+  - DOMAIN-SUFFIX,fox.com,Fox+ ⚡
+  - DOMAIN-SUFFIX,foxdcg.com,Fox+ ⚡
+  - DOMAIN-SUFFIX,foxnow.com,Fox+ ⚡
+  - DOMAIN-SUFFIX,foxplus.com,Fox+ ⚡
+  - DOMAIN-SUFFIX,foxplay.com,Fox+ ⚡
+  - DOMAIN-SUFFIX,ipinfo.io,Fox+ ⚡
+  - DOMAIN-SUFFIX,mstage.io,Fox+ ⚡
+  - DOMAIN-SUFFIX,now.com,Fox+ ⚡
+  - DOMAIN-SUFFIX,theplatform.com,Fox+ ⚡
+  - DOMAIN-SUFFIX,urlload.net,Fox+ ⚡
+  - DOMAIN-SUFFIX,netflix.com,Netflix 📺
+  - DOMAIN-SUFFIX,netflix.net,Netflix 📺
+  - DOMAIN-SUFFIX,nflxext.com,Netflix 📺
+  - DOMAIN-SUFFIX,nflximg.com,Netflix 📺
+  - DOMAIN-SUFFIX,nflximg.net,Netflix 📺
+  - DOMAIN-SUFFIX,nflxso.net,Netflix 📺
+  - DOMAIN-SUFFIX,nflxvideo.net,Netflix 📺
+  - DOMAIN-KEYWORD,spotify,Spotify 🎧
+  - DOMAIN-SUFFIX,scdn.co,Spotify 🎧
+  - DOMAIN-SUFFIX,spoti.fi,Spotify 🎧
+  - DOMAIN-SUFFIX,viu.tv,viuTV 📺
+  - DOMAIN-SUFFIX,youtu.be,▶ YouTube
+  - DOMAIN-SUFFIX,youtube.com,▶ YouTube
+  - DOMAIN-SUFFIX,youtube-nocookie.com,▶ YouTube
+  - DOMAIN-SUFFIX,googlevideo.com,▶ YouTube
+  - DOMAIN-SUFFIX,ytimg.com,▶ YouTube
+  - DOMAIN-KEYWORD,amazon,DNS ⚡
+  - DOMAIN-KEYWORD,google,DNS ⚡
+  - DOMAIN-KEYWORD,gmail,DNS ⚡
+  - DOMAIN-KEYWORD,youtube,DNS ⚡
+  - DOMAIN-KEYWORD,facebook,DNS ⚡
+  - DOMAIN-SUFFIX,fb.me,DNS ⚡
+  - DOMAIN-SUFFIX,fbcdn.net,DNS ⚡
+  - DOMAIN-KEYWORD,twitter,DNS ⚡
+  - DOMAIN-KEYWORD,instagram,DNS ⚡
+  - DOMAIN-KEYWORD,dropbox,DNS ⚡
+  - DOMAIN-SUFFIX,twimg.com,DNS ⚡
+  - DOMAIN-KEYWORD,blogspot,DNS ⚡
+  - DOMAIN-SUFFIX,youtu.be,DNS ⚡
+  - DOMAIN-KEYWORD,whatsapp,DNS ⚡
+  - DOMAIN-KEYWORD,speedtest,Speedtest ⚡
+  - DOMAIN-SUFFIX,ooklaserver.net,Speedtest ⚡
+  - DOMAIN-SUFFIX,telegra.ph,Telegram ⛅
+  - DOMAIN-SUFFIX,telegram.org,Telegram ⛅
+  - DOMAIN-KEYWORD,qiyi,DIRECT
+  - DOMAIN-SUFFIX,qy.net,DIRECT
+  - IP-CIDR,91.108.56.0/22,PROXY 🚀
+  - IP-CIDR,91.108.4.0/22,PROXY 🚀
+  - IP-CIDR,91.108.8.0/22,PROXY 🚀
+  - IP-CIDR,109.239.140.0/24,PROXY 🚀
+  - IP-CIDR,149.154.160.0/20,PROXY 🚀
+  - IP-CIDR,149.154.164.0/22,PROXY 🚀
+  - DOMAIN-SUFFIX,git-tower.com,⌨️ Coding
+  - DOMAIN-SUFFIX,jetbrains.com,⌨️ Coding
+  - DOMAIN-SUFFIX,mozilla.net,🦊 Mozilla
+  - DOMAIN-SUFFIX,mozilla.com,🦊 Mozilla
+  - DOMAIN-SUFFIX,mozilla.org,🦊 Mozilla
+  - DOMAIN-SUFFIX,developer.apple.com,PROXY 🚀
+  - DOMAIN-SUFFIX,icloud.com,DIRECT
+  - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+  - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+  - DOMAIN-SUFFIX,apple.com,🍎 Apple
+  - DOMAIN-SUFFIX,itunes.com,🍎 Apple
+  - DOMAIN-SUFFIX,me.com,🍎 Apple
+  - DOMAIN-SUFFIX,mzstatic.com,🍎 Apple
+  - DOMAIN-SUFFIX,aaplimg.com,🍎 Apple
+  - DOMAIN-SUFFIX,apple.co,🍎 Apple
+  - DOMAIN-SUFFIX,appstore.com,🍎 Apple
+  - DOMAIN-SUFFIX,cdn-apple.com,🍎 Apple
+  - DOMAIN-SUFFIX,crashlytics.com,🍎 Apple
+  - DOMAIN-SUFFIX,lin.ee,Line ☁
+  - DOMAIN-SUFFIX,line.me,Line ☁
+  - DOMAIN-SUFFIX,line.naver.jp,Line ☁
+  - DOMAIN-SUFFIX,line-apps.com,Line ☁
+  - DOMAIN-SUFFIX,line-cdn.net,Line ☁
+  - DOMAIN-SUFFIX,line-scdn.net,Line ☁
+  - DOMAIN-SUFFIX,nhncorp.jp,Line ☁
+  - DOMAIN-KEYWORD,microsoft,🌫 Microsoft
+  - DOMAIN-SUFFIX,hotmail.com,🌫 Microsoft
+  - DOMAIN-SUFFIX,live.com,🌫 Microsoft
+  - DOMAIN-SUFFIX,live.net,🌫 Microsoft
+  - DOMAIN-SUFFIX,msn.com,🌫 Microsoft
+  - DOMAIN-SUFFIX,office.com,🌫 Microsoft
+  - DOMAIN-SUFFIX,office.net,🌫 Microsoft
+  - DOMAIN-SUFFIX,outlook.com,🌫 Microsoft
+  - DOMAIN-SUFFIX,api.amplitude.com,DIRECT
+  - DOMAIN-SUFFIX,app.smartmailcloud.com,Spark ⭐
+  - DOMAIN-SUFFIX,gate.hockeyapp.net,Spark ⭐
+  - DOMAIN-SUFFIX,smartmailcloud.com,Spark ⭐
+  - DOMAIN-SUFFIX,fanatical.com,Steam 🎮
+  - DOMAIN-SUFFIX,humblebundle.com,Steam 🎮
+  - DOMAIN-SUFFIX,steamcommunity.com,Steam 🎮
+  - DOMAIN-SUFFIX,steampowered.com,DIRECT
+  - DOMAIN-SUFFIX,steamstatic.com,DIRECT
+  - IP-CIDR,13.32.0.0/16,Amazon Prime Video 🎥
+  - IP-CIDR,13.33.0.0/16,Amazon Prime Video 🎥
+  - IP-CIDR,13.35.0.0/17,Amazon Prime Video 🎥
+  - IP-CIDR,18.184.0.0/15,Amazon Prime Video 🎥
+  - IP-CIDR,18.194.0.0/15,Amazon Prime Video 🎥
+  - IP-CIDR,18.208.0.0/13,Amazon Prime Video 🎥
+  - IP-CIDR,18.232.0.0/14,Amazon Prime Video 🎥
+  - IP-CIDR,52.200.0.0/13,Amazon Prime Video 🎥
+  - IP-CIDR,52.58.0.0/15,Amazon Prime Video 🎥
+  - IP-CIDR,52.74.0.0/16,Amazon Prime Video 🎥
+  - IP-CIDR,52.77.0.0/16,Amazon Prime Video 🎥
+  - IP-CIDR,52.84.0.0/15,Amazon Prime Video 🎥
+  - IP-CIDR,54.156.0.0/14,Amazon Prime Video 🎥
+  - IP-CIDR,54.226.0.0/15,Amazon Prime Video 🎥
+  - IP-CIDR,54.230.156.0/22,Amazon Prime Video 🎥
+  - IP-CIDR,54.93.0.0/16,Amazon Prime Video 🎥
+  - IP-CIDR,103.4.96.0/22,Facebook 🌐
+  - IP-CIDR,129.134.0.0/17,Facebook 🌐
+  - IP-CIDR,157.240.0.0/17,Facebook 🌐
+  - IP-CIDR,173.252.64.0/19,Facebook 🌐
+  - IP-CIDR,173.252.96.0/19,Facebook 🌐
+  - IP-CIDR,179.60.192.0/22,Facebook 🌐
+  - IP-CIDR,185.60.216.0/22,Facebook 🌐
+  - IP-CIDR,204.15.20.0/22,Facebook 🌐
+  - IP-CIDR,31.13.24.0/21,Facebook 🌐
+  - IP-CIDR,31.13.64.0/18,Facebook 🌐
+  - IP-CIDR,45.64.40.0/22,Facebook 🌐
+  - IP-CIDR,66.220.144.0/20,Facebook 🌐
+  - IP-CIDR,69.171.224.0/19,Facebook 🌐
+  - IP-CIDR,69.63.176.0/20,Facebook 🌐
+  - IP-CIDR,74.119.76.0/22,Facebook 🌐
+  - DOMAIN-SUFFIX,google.com.hk,Google ⛅
+  - DOMAIN-SUFFIX,google.com.jp,Google ⛅
+  - DOMAIN-SUFFIX,googleusercontent.com,Google ⛅
+  - DOMAIN-SUFFIX,fonts.googleapis.com,DIRECT
+  - DOMAIN-SUFFIX,fonts.gstatic.com,DIRECT
+  - DOMAIN-SUFFIX,goo.gl,Google ⛅
+  - DOMAIN-SUFFIX,gvt1.com,Google ⛅
+  - DOMAIN-SUFFIX,ggpht.com,Google ⛅
+  - DOMAIN-SUFFIX,google.com,Google ⛅
+  - DOMAIN-SUFFIX,googleapis.com,Google ⛅
+  - DOMAIN-KEYWORD,gmail,Google ⛅
+  - DOMAIN-KEYWORD,gstatic,Google ⛅
+  - IP-CIDR,173.194.0.0/16,Google ⛅
+  - IP-CIDR,74.125.0.0/16,Google ⛅
+  - IP-CIDR,1.201.0.0/24,Kakao Talk ⚡
+  - IP-CIDR,103.246.56.0/22,Kakao Talk ⚡
+  - IP-CIDR,103.27.148.0/22,Kakao Talk ⚡
+  - IP-CIDR,110.76.140.0/22,Kakao Talk ⚡
+  - IP-CIDR,113.61.104.0/22,Kakao Talk ⚡
+  - IP-CIDR,27.0.236.0/22,Kakao Talk ⚡
+  - IP-CIDR,103.2.28.0/22,Line ☁
+  - IP-CIDR,119.235.224.0/21,Line ☁
+  - IP-CIDR,119.235.232.0/23,Line ☁
+  - IP-CIDR,119.235.235.0/24,Line ☁
+  - IP-CIDR,119.235.236.0/23,Line ☁
+  - IP-CIDR,125.6.146.0/24,Line ☁
+  - IP-CIDR,125.6.149.0/24,Line ☁
+  - IP-CIDR,125.6.190.0/24,Line ☁
+  - IP-CIDR,125.209.208.0/20,Line ☁
+  - IP-CIDR,203.104.103.0/24,Line ☁
+  - IP-CIDR,203.104.128.0/20,Line ☁
+  - IP-CIDR,203.174.66.64/26,Line ☁
+  - IP-CIDR,203.174.77.0/24,Line ☁
+  - IP-CIDR,13.251.24.157/24,Potato Chat 📡
+  - IP-CIDR,13.251.41.203/24,Potato Chat 📡
+  - IP-CIDR,17.252.156.147/24,Potato Chat 📡
+  - IP-CIDR,17.252.157.26/24,Potato Chat 📡
+  - IP-CIDR,74.86.0.0/16,SoftLayer ⛅
+  - IP-CIDR,75.126.0.0/16,SoftLayer ⛅
+  - IP-CIDR,174.37.0.0/16,SoftLayer ⛅
+  - IP-CIDR,208.43.0.0/16,SoftLayer ⛅
+  - IP-CIDR,67.198.55.0/24,Telegram ⛅
+  - IP-CIDR,91.108.4.0/22,Telegram ⛅
+  - IP-CIDR,91.108.8.0/22,Telegram ⛅
+  - IP-CIDR,91.108.12.0/22,Telegram ⛅
+  - IP-CIDR,91.108.16.0/22,Telegram ⛅
+  - IP-CIDR,91.108.56.0/22,Telegram ⛅
+  - IP-CIDR,109.239.140.0/24,Telegram ⛅
+  - IP-CIDR,149.154.160.0/20,Telegram ⛅
+  - IP-CIDR,205.172.60.0/22,Telegram ⛅
+payload:
+  - DOMAIN-KEYWORD,1e100
+  - DOMAIN-KEYWORD,abema
+  - DOMAIN-KEYWORD,appledaily
+  - DOMAIN-KEYWORD,avtb
+  - DOMAIN-KEYWORD,beetalk
+  - DOMAIN-KEYWORD,blogspot
+  - DOMAIN-KEYWORD,dropbox
+  - DOMAIN-KEYWORD,facebook
+  - DOMAIN-KEYWORD,fbcdn
+  - DOMAIN-KEYWORD,github
+  - DOMAIN-KEYWORD,gmail
+  - DOMAIN-KEYWORD,google
+  - DOMAIN-KEYWORD,instagram
+  - DOMAIN-KEYWORD,porn
+  - DOMAIN-KEYWORD,sci-hub
+  - DOMAIN-KEYWORD,spotify
+  - DOMAIN-KEYWORD,telegram
+  - DOMAIN-KEYWORD,twitter
+  - DOMAIN-KEYWORD,whatsapp
+  - DOMAIN-KEYWORD,youtube
+  - DOMAIN-SUFFIX,4sqi.net
+  - DOMAIN-SUFFIX,a248.e.akamai.net
+  - DOMAIN-SUFFIX,adobedtm.com
+  - DOMAIN-SUFFIX,ampproject.org
+  - DOMAIN-SUFFIX,android.com
+  - DOMAIN-SUFFIX,aolcdn.com
+  - DOMAIN-SUFFIX,apkmirror.com
+  - DOMAIN-SUFFIX,apkpure.com
+  - DOMAIN-SUFFIX,app-measurement.com
+  - DOMAIN-SUFFIX,appspot.com
+  - DOMAIN-SUFFIX,archive.org
+  - DOMAIN-SUFFIX,armorgames.com
+  - DOMAIN-SUFFIX,aspnetcdn.com
+  - DOMAIN-SUFFIX,awsstatic.com
+  - DOMAIN-SUFFIX,azureedge.net
+  - DOMAIN-SUFFIX,azurewebsites.net
+  - DOMAIN-SUFFIX,bandwagonhost.com
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,bkrtx.com
+  - DOMAIN-SUFFIX,blogcdn.com
+  - DOMAIN-SUFFIX,blogger.com
+  - DOMAIN-SUFFIX,blogsmithmedia.com
+  - DOMAIN-SUFFIX,blogspot.com
+  - DOMAIN-SUFFIX,blogspot.hk
+  - DOMAIN-SUFFIX,blogspot.jp
+  - DOMAIN-SUFFIX,bloomberg.cn
+  - DOMAIN-SUFFIX,bloomberg.com
+  - DOMAIN-SUFFIX,box.com
+  - DOMAIN-SUFFIX,cachefly.net
+  - DOMAIN-SUFFIX,cdnst.net
+  - DOMAIN-SUFFIX,cloudfront.net
+  - DOMAIN-SUFFIX,comodoca.com
+  - DOMAIN-SUFFIX,daum.net
+  - DOMAIN-SUFFIX,demdex.net
+  - DOMAIN-SUFFIX,deskconnect.com
+  - DOMAIN-SUFFIX,disqus.com
+  - DOMAIN-SUFFIX,disquscdn.com
+  - DOMAIN-SUFFIX,dropbox.com
+  - DOMAIN-SUFFIX,dropboxapi.com
+  - DOMAIN-SUFFIX,dropboxstatic.com
+  - DOMAIN-SUFFIX,dropboxusercontent.com
+  - DOMAIN-SUFFIX,duckduckgo.com
+  - DOMAIN-SUFFIX,edgecastcdn.net
+  - DOMAIN-SUFFIX,edgekey.net
+  - DOMAIN-SUFFIX,edgesuite.net
+  - DOMAIN-SUFFIX,eurekavpt.com
+  - DOMAIN-SUFFIX,fastmail.com
+  - DOMAIN-SUFFIX,firebaseio.com
+  - DOMAIN-SUFFIX,flickr.com
+  - DOMAIN-SUFFIX,flipboard.com
+  - DOMAIN-SUFFIX,gfx.ms
+  - DOMAIN-SUFFIX,gongm.in
+  - DOMAIN-SUFFIX,hulu.com
+  - DOMAIN-SUFFIX,id.heroku.com
+  - DOMAIN-SUFFIX,io.io
+  - DOMAIN-SUFFIX,issuu.com
+  - DOMAIN-SUFFIX,ixquick.com
+  - DOMAIN-SUFFIX,jtvnw.net
+  - DOMAIN-SUFFIX,kat.cr
+  - DOMAIN-SUFFIX,kik.com
+  - DOMAIN-SUFFIX,kobo.com
+  - DOMAIN-SUFFIX,kobobooks.com
+  - DOMAIN-SUFFIX,licdn.com
+  - DOMAIN-SUFFIX,live.net
+  - DOMAIN-SUFFIX,livefilestore.com
+  - DOMAIN-SUFFIX,llnwd.net
+  - DOMAIN-SUFFIX,macrumors.com
+  - DOMAIN-SUFFIX,medium.com
+  - DOMAIN-SUFFIX,mega.nz
+  - DOMAIN-SUFFIX,megaupload.com
+  - DOMAIN-SUFFIX,messenger.com
+  - DOMAIN-SUFFIX,netdna-cdn.com
+  - DOMAIN-SUFFIX,nintendo.net
+  - DOMAIN-SUFFIX,nsstatic.net
+  - DOMAIN-SUFFIX,nytstyle.com
+  - DOMAIN-SUFFIX,openvpn.net
+  - DOMAIN-SUFFIX,periscope.tv
+  - DOMAIN-SUFFIX,pinimg.com
+  - DOMAIN-SUFFIX,pinterest.com
+  - DOMAIN-SUFFIX,potato.im
+  - DOMAIN-SUFFIX,prfct.co
+  - DOMAIN-SUFFIX,pscp.tv
+  - DOMAIN-SUFFIX,quora.com
+  - DOMAIN-SUFFIX,resilio.com
+  - DOMAIN-SUFFIX,sfx.ms
+  - DOMAIN-SUFFIX,shadowsocks.org
+  - DOMAIN-SUFFIX,slack-edge.com
+  - DOMAIN-SUFFIX,smartdnsproxy.com
+  - DOMAIN-SUFFIX,sndcdn.com
+  - DOMAIN-SUFFIX,soundcloud.com
+  - DOMAIN-SUFFIX,startpage.com
+  - DOMAIN-SUFFIX,staticflickr.com
+  - DOMAIN-SUFFIX,symauth.com
+  - DOMAIN-SUFFIX,symcb.com
+  - DOMAIN-SUFFIX,symcd.com
+  - DOMAIN-SUFFIX,textnow.com
+  - DOMAIN-SUFFIX,textnow.me
+  - DOMAIN-SUFFIX,thefacebook.com
+  - DOMAIN-SUFFIX,thepiratebay.org
+  - DOMAIN-SUFFIX,torproject.org
+  - DOMAIN-SUFFIX,trustasiassl.com
+  - DOMAIN-SUFFIX,tumblr.co
+  - DOMAIN-SUFFIX,tumblr.com
+  - DOMAIN-SUFFIX,tvb.com
+  - DOMAIN-SUFFIX,txmblr.com
+  - DOMAIN-SUFFIX,v2ex.com
+  - DOMAIN-SUFFIX,vimeo.com
+  - DOMAIN-SUFFIX,vine.co
+  - DOMAIN-SUFFIX,vox-cdn.com
